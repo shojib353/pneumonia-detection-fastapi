@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+tensorflow
+numpy
+pillow
+opencv-python
+python-multipart
+scikit-learn
+pandas
+requests
+matplotlib
+python-dotenv
+jinja2
+sqlalchemy
+psycopg2-binary
+pytest
+httpx
