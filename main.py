@@ -12,6 +12,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+print("✅ FastAPI is running from main.py")
+
 @app.get("/")
 def health():
     return {"status": "ok"}
