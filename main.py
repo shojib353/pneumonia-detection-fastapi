@@ -8,8 +8,18 @@ from preprocessing import preprocess_image_from_bytes
 app = FastAPI()
 
 model = load_model("bestx_model.keras")
+from fastapi import FastAPI
 
-@app.post("/")
+app = FastAPI()
+
+@app.get("/")
+def health():
+    return {"status": "ok"}
+@app.get("/health")
+def health():
+    return {"status": "ok health"}
+
+@app.post("/result")
 async def predict(file: UploadFile = File(...)):
     # return JSONResponse(content={"message": "Prediction endpoint is not implemented yet."})
     image_bytes = await file.read()
